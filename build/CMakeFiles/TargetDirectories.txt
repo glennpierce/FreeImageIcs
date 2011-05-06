@@ -1,0 +1,2 @@
+/home/glenn/Devel/ATD/ATD_Libraries/FreeImageIcs/trunk/build/Tests/CMakeFiles/FreeImageIcsTests.dir
+/home/glenn/Devel/ATD/ATD_Libraries/FreeImageIcs/trunk/build/CMakeFiles/freeimageics.dir
