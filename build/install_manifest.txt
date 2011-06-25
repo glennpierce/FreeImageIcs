@@ -1,4 +1,0 @@
-/usr/local/lib/libfreeimageics.so
-/usr/local/include/freeimageics/libics.h
-/usr/local/include/freeimageics/FreeImageIcs_IO.h
-/usr/local/include/freeimageics/FreeImageIcs_MetaData.h

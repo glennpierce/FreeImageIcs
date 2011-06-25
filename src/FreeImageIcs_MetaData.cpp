@@ -28,6 +28,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 
 #include <iostream>
 
@@ -167,12 +168,12 @@ FreeImageIcs_IcsDeleteHistory(ICS *ics)
 int DLL_CALLCONV
 FreeImageIcs_SetIcsHistoryKeyValueStrings(ICS *ics, ...)
 {
-	IcsDeleteHistory (ics, NULL);
-
 	char *history_key, *history_string;
 
 	va_list ap;
 	va_start(ap, ics);
+
+    IcsDeleteHistory (ics, NULL);
 
 	while((history_key = va_arg(ap, char*)) != NULL)
 	{
@@ -189,12 +190,12 @@ FreeImageIcs_SetIcsHistoryKeyValueStrings(ICS *ics, ...)
 int DLL_CALLCONV
 FreeImageIcs_SetIcsHistoryStrings(ICS *ics, ...)
 {
-	IcsDeleteHistory (ics, NULL);
-
 	char *history_string;
 
 	va_list ap;
 	va_start(ap, ics);
+
+    IcsDeleteHistory (ics, NULL);
 
 	while((history_string = va_arg(ap, char*)) != NULL)
 		IcsAddHistory (ics, NULL, history_string);
@@ -221,10 +222,9 @@ int DLL_CALLCONV
 FreeImageIcs_AddIcsHistoryKeyValueStrings(ICS *ics, ...)
 {
 	char **history_strings = NULL;
-
 	char *history_key, *history_string;
-
 	va_list ap;
+
 	va_start(ap, ics);
 
 	while((history_key = va_arg(ap, char*)) != NULL)
